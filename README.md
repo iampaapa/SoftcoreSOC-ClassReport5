@@ -71,6 +71,31 @@ To prevent memory mapping errors (which was happening when I was using Vitis dir
 
 -----
 
+### **Running the Project using the Pre-built Binaries**
+
+To actually run the project without rebuilding the entire hardware and software stack, you can use the pre-compiled artifacts located in the `bin/` directory.
+
+**Files Included:**
+* `mcs_top_sampler.bit`: The complete FPGA bitstream with the C++ application already embedded.
+* `project_thermometer.xsa`: The hardware specification file (for Vitis).
+* `thermometer_app.elf`: The compiled software executable.
+
+**Steps to use:**
+1.  Connect your **Nexys 4 DDR** board via USB and turn it ON.
+2.  Open **Vivado**.
+3.  Click **Open Hardware Manager** under **Tasks**
+3.  Click **Open Target** -> **Auto Connect**.
+4.  Click **Program Device**.
+5.  Browse to and select `bin/mcs_top_sampler.bit`.
+6.  Click **Program**.
+
+**Expected Results:**
+* The 7-segment display should show the current temperature (e.g., `24.12 C`).
+* Flipping **Switch 0 (SW0)** toggles the unit between Celsius (`C`) and Fahrenheit (`F`).
+* Touching the **ADT7420** sensor (IC5) causes the temperature reading to rise.
+
+-----
+
 ## Running the Project
 1.  Connect the Nexys 4 DDR board via USB and ensure it is powered ON.
 2.  **Check the 7-Segment Display:**
