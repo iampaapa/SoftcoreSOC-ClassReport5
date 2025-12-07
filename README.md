@@ -96,10 +96,10 @@ To actually run the project without rebuilding the entire hardware and software 
 1.  Connect your **Nexys 4 DDR** board via USB and turn it ON.
 2.  Open **Vivado**.
 3.  Click **Open Hardware Manager** under **Tasks**
-3.  Click **Open Target** -> **Auto Connect**.
-4.  Click **Program Device**.
-5.  Browse to and select `bin/mcs_top_sampler.bit`.
-6.  Click **Program**.
+4.  Click **Open Target** -> **Auto Connect**.
+5.  Click **Program Device**.
+6.  Browse to and select `bin/mcs_top_sampler.bit`.
+7.  Click **Program**.
 
 **Expected Results:**
 * The 7-segment display should show the current temperature (e.g., `24.12 C`).
