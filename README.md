@@ -71,6 +71,18 @@ To prevent memory mapping errors (which was happening when I was using Vitis dir
 
 -----
 
+## Running the Project
+1.  Connect the Nexys 4 DDR board via USB and ensure it is powered ON.
+2.  **Check the 7-Segment Display:**
+      * It should display the current ambient temperature in Celsius (e.g., 24.50C).
+3.  **Toggle Units:**
+      * Flip Switch 0 (SW0) UP.
+      * The display should change to Fahrenheit (e.g., 76.10F).
+
+If you place a hotter or colder object (e.g., your finger or some ice) on the ADT7420 sensor (labeled IC5, near the DDR memory), the temperature reading will rise  or fall on the display.
+
+-----
+
 ### **Running the Project using the Pre-built Binaries**
 
 To actually run the project without rebuilding the entire hardware and software stack, you can use the pre-compiled artifacts located in the `bin/` directory.
@@ -93,15 +105,3 @@ To actually run the project without rebuilding the entire hardware and software 
 * The 7-segment display should show the current temperature (e.g., `24.12 C`).
 * Flipping **Switch 0 (SW0)** toggles the unit between Celsius (`C`) and Fahrenheit (`F`).
 * Touching the **ADT7420** sensor (IC5) causes the temperature reading to rise.
-
------
-
-## Running the Project
-1.  Connect the Nexys 4 DDR board via USB and ensure it is powered ON.
-2.  **Check the 7-Segment Display:**
-      * It should display the current ambient temperature in Celsius (e.g., 24.50C).
-3.  **Toggle Units:**
-      * Flip Switch 0 (SW0) UP.
-      * The display should change to Fahrenheit (e.g., 76.10F).
-
-If you place a hotter or colder object (e.g., your finger or some ice) on the ADT7420 sensor (labeled IC5, near the DDR memory), the temperature reading will rise  or fall on the display.
